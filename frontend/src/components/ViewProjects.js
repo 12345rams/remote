@@ -77,17 +77,24 @@ const ViewProjects = ({ token, userId }) => {
     };
 
     const iconStyle = {
-        marginRight: '8px',
-        color: 'black' 
+        marginRight: '4px',
+        color: 'black' ,
+        width:'30px',
+        height:'20px'
     };
     const iconStyle1 = {
-        marginRight: '8px',
-        color: 'red' 
+        marginRight: '4px',
+        color: 'red' ,
+         width:'30px',
+          height:'20px'
     };
     const iconStyle2 = {
-        marginRight: '8px',
-        color: 'blue' 
+        marginRight: '4px',
+         width:'30px',
+        color: 'blue',
+         height:'20px'
     };
+    
     
 
     if (loading) return <Spinner animation="border" />;
@@ -133,6 +140,7 @@ const ViewProjects = ({ token, userId }) => {
                                         >
                                             <Button
                                                 variant="light" 
+                                                size="sm"
                                                 onClick={() => handleProjectClick(project.id)}
                                             >
                                                 {showTasksForProject === project.id ? (
@@ -141,7 +149,7 @@ const ViewProjects = ({ token, userId }) => {
                                                     </>
                                                 ) : (
                                                     <>
-                                                        <IoEye style={iconStyle}/> Show Tasks
+                                                        <IoEye style={iconStyle}/>
                                                     </>
                                                 )}
                                             </Button>
